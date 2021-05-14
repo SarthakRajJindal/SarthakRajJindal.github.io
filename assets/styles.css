@@ -1,0 +1,395 @@
+nav {
+  background-color: rgba(0,0,0,0.8);
+  color: green;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(56, 54, 54);
+  opacity: 1; /* Firefox */
+}
+
+
+
+.content {
+  background-color:rgba(255,255,255,.5);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  /* box-sizing:border-box; */
+  /* left:50%; */
+  padding:10vmin;
+  /* position:fixed; */
+  text-align:center;
+  /* top:50%; */
+  /* transform:translate(-50%, -50%); */
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+
+
+
+h1 {
+ font-size:5em;
+ font:bold 7.5vw/1.6 'Signika', sans-serif;
+ user-select:none;
+}
+
+h1 span { display:inline-block; animation:float .2s ease-in-out infinite; }
+ @keyframes float {
+  0%,100%{ transform:none; }
+  33%{ transform:translateY(-1px) rotate(-2deg); }
+  66%{ transform:translateY(1px) rotate(2deg); }
+}
+body:hover span { animation:bounce 1s; }
+@keyframes bounce {
+  0%,100%{ transform:translate(0); }
+  25%{ transform:rotateX(20deg) translateY(4px) rotate(-3deg); }
+  50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+}
+
+h1 span:nth-child(4n) { color:hsl(69, 100%, 50%); text-shadow:1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%); }
+h1 span:nth-child(4n-1) { color:hsl(135, 92%, 60%); text-shadow:1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%); }
+h1 span:nth-child(4n-2) { color:	hsl(184, 98%, 56%); text-shadow:1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%); }
+h1 span:nth-child(4n-3) { color:	hsl(36, 98%, 53%); text-shadow:1px 1px hsl(34, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%); }
+
+h1 span:nth-child(2){ animation-delay:.05s; }
+h1 span:nth-child(3){ animation-delay:.1s; }
+h1 span:nth-child(4){ animation-delay:.15s; }
+h1 span:nth-child(5){ animation-delay:.2s; }
+h1 span:nth-child(6){ animation-delay:.25s; }
+h1 span:nth-child(7){ animation-delay:.3s; }
+h1 span:nth-child(8){ animation-delay:.35s; }
+
+
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1,
+nav {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+}
+
+
+
+h1 {
+  margin-top: 75px;
+  padding: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+}
+
+p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+img {
+  height: 100%;
+}
+
+audio {
+  margin-top: 28px;
+}
+
+.fa-map-marker:hover,
+.fa-envelope:hover,
+.fa-phone:hover {
+  color: #f5c002;
+}
+
+a:hover,
+.fa-map-marker,
+.fa-envelope,
+.fa-phone,
+#noteLogo {
+  color: yellow;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.no-shadows {
+  box-shadow: none !important;
+}
+
+.descriptiondiv {
+  margin-top: 10px;
+}
+
+.butlerdiv {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.butlerlogo {
+  width: 225px;
+}
+
+h2,
+.submitBtn,
+.submitArtistBtn,
+.messageBtn,
+.goBackBtn {
+  font-size: 25px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+}
+
+.toast {
+  background-color: #f5c002;
+  color: black;
+}
+
+.topLinks {
+  margin-top: 60px;
+}
+
+.topImgs {
+  width: 200px;
+  border-radius: 50px;
+}
+
+.topImgs:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hide {
+  display: none;
+}
+
+.albumImg {
+  width: 100%;
+}
+
+.monthlyText {
+  margin-bottom: 75px;
+  font-size: 24px;
+}
+
+.card-title {
+  text-shadow: 2px 2px 5px black;
+}
+
+.card-image {
+  height: 295px;
+}
+
+.card-content {
+  height: 215px;
+  overflow: scroll;
+}
+
+.album-image {
+  height: auto;
+}
+
+.album-content {
+  height: 150px;
+  overflow: scroll;
+}
+
+.songInfoDiv,
+.topSongsInfoDiv {
+  margin-top: 10px;
+}
+
+.songData,
+.topSongData {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.userSongDiv,
+.userArtistChoice,
+.userTopSongDiv {
+  margin-bottom: 75px;
+}
+
+.lyricsBtn {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  margin-top: 38px;
+}
+
+.lyricsAlbumBtn {
+  margin-top: 0px;
+}
+
+.audioAlbum {
+  margin-top: 8px;
+}
+
+.albumName {
+  margin-top: 65px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.artistName {
+  font-size: 25px;
+}
+
+.returnBtn {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.songChoice,
+.userArtistChoice,
+.topSong {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.artistChoice {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  text-shadow: 0;
+}
+
+.songLyric {
+  font-size: 50px;
+}
+
+.artistTopSongDiv,
+.userTopSongDiv {
+  margin-top: 75px;
+}
+
+.page-footer {
+  background-color: transparent;
+  color: black;
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.aboutH1 {
+  margin-bottom: 40px;
+}
+
+.help-tag {
+  font-family: "Prompt", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 55px;
+}
+
+#askwinstonlogo {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#noteLogo:hover {
+  color: white;
+}
+
+#songRadioBtn,
+#artistRadioBtn {
+  color: black;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+#homeAddress:hover,
+#contactPhone:hover,
+#email:hover,
+#inezImage:hover,
+#marcImage:hover,
+#ramonImage:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+#homeAddress,
+#contactPhone,
+#email,
+#inezImage,
+#marcImage,
+#ramonImage {
+  transition: transform 0.5s ease;
+}
+
+#inezBio,
+#marcBio,
+#ramonBio {
+  font-size: 18px;
+}
+
+#meetDevBtn {
+  margin-bottom: 15px;
+}
+

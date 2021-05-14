@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TuneINN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link rel="icon" type="image/png" href="./assets/pics/note.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <!--Navbar-->
+    <header>
+      <nav class="no-shadows">
+        <div class="nav-wrapper">
+          <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank" class="brand-logo right" id="noteLogo"><i class="fa fa-music"></i></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+          <ul class="left hide-on-med-and-down">
+            <li class="home-page active"><a href="./index.html">HOME</a></li>
+            <li><a href="./help.html">HELP</a></li>
+          </ul>
+        </div>
+      </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li class="home-page active"><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./help.html">HELP</a></li>
+      </ul>
+    </header>
+
+
+    <main>
+      <div class="container">
+        <!--Search Info Div-->
+        <div class="searchInfo center-align">
+          <!-- Logo -->
+          <!-- <div class="row butlerdiv">
+            <img src="./assets/pics/butler.png" alt="" class="butlerlogo" />
+          </div> -->
+          
+          <div class="row">
+            <h1><span>T</span><span>u</span><span>n</span><span>e</span><span>I</span><span>N</span><span>N</h1>
+            <!-- <h2 class="descriptiondiv">Music Recommendation System</h2> -->
+          </div>
+        
+          <!-- Radio Buttons -->
+          
+          <div class = "content">
+          <div class="row s12">
+            <form action="#">
+              <p class="col s2 offset-m4">
+                <label id="artistRadioBtn">
+                  <input name="QuerySelect" type="radio" id="artistR2" checked />
+                  <span>Artist</span>
+                  
+                </label>
+              </p>
+              <p class="col s2">
+                <label id="songRadioBtn">
+                  <input name="QuerySelect" type="radio" id="songR1" />
+                  <span>Song</span>
+                </label>
+              </p>
+            </form>
+          </div>
+          <!-- Artist Form -->
+        
+          <div class="row artistForm center-align">
+            <form class="col s12 m4 offset-m4">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input class="onlyArtistInput" type="text" class="validate" placeholder="Artist Name" />
+                </div>
+              </div>
+              <button class="btn waves-effect waves-light btn-large submitArtistBtn" type="submit" name="action">Search</button>
+            </form>
+          </div>
+          <!-- Song Form -->
+          <div class="row songForm center-align hide">
+            <form class="col s12 m6 offset-m3">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input class="songInput" type="text" class="validate" placeholder="Song Name"/>
+                </div>
+                <div class="input-field col s6">
+                  <input class="artistInput" type="text" class="validate" placeholder="Artist Name" />
+                </div>
+              </div>
+              <button class="btn waves-effect waves-light btn-large submitBtn" type="submit" name="action">Search</button>
+            </form>
+          </div>
+        </div>
+        
+          <!-- Top Links -->
+          <div class="row">
+            <div class="col s4 right-align topLinks">
+              <a href="#">
+                <img src="./assets/pics/topsongs.png" alt="HTML tutorial" class="topImgs" data-type="top songs" />
+              </a>
+            </div>
+            <div class="col s4 center-align topLinks">
+              <a href="#">
+                <img src="./assets/pics/topartists.png" alt="HTML tutorial" class="topImgs" data-type="top artists" />
+              </a>
+            </div>
+            <div class="col s4 left-align topLinks">
+              <a href="#">
+                <img src="./assets/pics/topalbums.png" alt="HTML tutorial" class="topImgs" data-type="top albums" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--Display Monthly Top Songs-->
+        <div class="monthlyTopSongsDiv hide">
+          <div class="row center-align">
+            <h1>TOP SONGS</h1>
+            <p class="monthlyText">Updated Monthly</p>
+            <div class="monthlySongDiv"></div>
+          </div>
+        </div>
+        <!--Display Monthly Top Artists-->
+        <div class="monthlyTopArtistsDiv hide">
+          <div class="row center-align">
+            <h1>TOP ARTISTS</h1>
+            <p class="monthlyText">Updated Monthly</p>
+            <div class="monthlyArtistDiv"></div>
+          </div>
+        </div>
+        <!-- Display Selected Artists Top Songs -->
+        <div class="artistTopSongsInfoDiv hide">
+          <div class="row artistTopSongInfo center-align">
+            <h1>TOP SONGS</h1>
+            <h2 class="artistTopSongH2"></h2>
+            <button class="btn waves-effect waves-light returnArtistsTopBtn">Return to Results</button>
+            <div class="artistTopSongDiv"></div>
+          </div>
+        </div>
+        <!--Display Monthly Top Albums-->
+        <div class="monthlyTopAlbumsDiv hide">
+          <div class="row center-align">
+            <h1>TOP ALBUMS</h1>
+            <p class="monthlyText">Updated Monthly</p>
+            <div class="monthlyAlbumDiv"></div>
+          </div>
+        </div>
+        <!--Display Album Details-->
+        <div class="albumDetailsDiv hide">
+          <div class="row center-align">
+            <h1>ALBUM DETAIL</h1>
+            <button class="btn waves-effect waves-light returnBtn">Return to Results</button>
+            <div class="albumDetailsInfo"></div>
+            <div class="albumTrackTable center-align"></div>
+          </div>
+        </div>
+        <!-- Display Similar Song Info Div -->
+        <div class="songInfoDiv hide">
+          <div class="row songInfo center-align">
+            <h1>SIMILAR SONGS</h1>
+            <div class="userSongDiv"></div>
+          </div>
+        </div>
+        <!-- Lyric Modal -->
+        <div id="modal1" class="lyricInfo center-align modal">
+          <div class="modal-content">
+            <h1 class="songLyric"></h1>
+            <h2 class="artistLyric"></h2>
+            <p class="lyric"></p>
+          </div>
+        </div>
+        <!-- Display Similar Artist Info Div -->
+        <div class="artistInfoDiv hide">
+          <div class="artistInfo center-align">
+            <h1>SIMILAR ARTISTS</h1>
+            <div class="userArtistChoice"></div>
+            <div class="row userArtistDiv"></div>
+          </div>
+        </div>
+        <!-- Display Top Songs Div -->
+        <div class="topSongsInfoDiv hide">
+          <div class="row topSongInfo center-align">
+            <h1>TOP SONGS</h1>
+            <h2 class="userTopSongH2"></h2>
+            <button class="btn waves-effect waves-light returnArtistsBtn">Return to Results</button>
+            <div class="userTopSongDiv"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <p class="copyright-text center-align">Software Engineering Project 2021</p>
+      </div>
+    </footer>
+    <!--Scripts and JQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/scripts/songScript.js"></script>
+    <script src="./assets/scripts/artistScript.js"></script>
+    <script src="assets/scripts/topScript.js"></script>
+
+    <script>
+      jQuery(document).ready(function(){
+        $('h1').mousemove(function(e){
+          var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+          var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+          $('h1').css('text-shadow', +rYP/10+'px '+rXP/80+'px rgba(227,6,19,.8), '+rYP/8+'px '+rXP/60+'px rgba(255,237,0,1), '+rXP/70+'px '+rYP/12+'px rgba(0,159,227,.7)');
+        });
+     });
+    </script>     
+
+
+   
+  </body>
+</html>
