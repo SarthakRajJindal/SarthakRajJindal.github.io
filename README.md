@@ -9,7 +9,7 @@
 
 The purpose of this project is to our knowledge of software engineering principles to create a web application. 
 
-Given that each one of us are big consumers of music we thought a recommendation engine based on an artist or song you already enjoy would be a good way to start. The application is primarily built upon the LastFM and Napster API's. When a Artist or Artist/Song combo is input by the user, the applications queries the LastFM API and it's Similar Artist call to give us information. With that in hand, the application then uses the Napster API to pull all relevant information for that intial call and display it to the user. The user is then allowed to search those songs at  their leisure and even enjoy quick song previews with song lyrics as well.
+TuneINN is primarily built upon the LastFM and Napster API's. When a Artist or Artist/Song combo is input by the user, the applications queries the LastFM API and it's Similar Artist call to give us information. With that in hand, the application then uses the Napster API to pull all relevant information for that intial call and display it to the user. The user is then allowed to search those songs at their leisure and even enjoy quick song previews with song lyrics as well. Efforts have been made to make the website simple, intiutive and convenient to use. 
 
 ## Developers
 
@@ -27,5 +27,5 @@ Given that each one of us are big consumers of music we thought a recommendation
 * CSS Framework
   - [Materialize](https://materializecss.com/)
 
-The webiste was build on pure HTML, CSS and JavaScript and no other frameworks were used to mantain simplictiy.
+The webiste was build mostly on pure HTML, CSS and JavaScript and we tried to not use extra frameworks to mantain simplicity. 
 
